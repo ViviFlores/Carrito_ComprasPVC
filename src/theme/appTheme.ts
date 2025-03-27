@@ -55,5 +55,94 @@ export const styles = StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'center',
         marginTop: 20
+    },
+    containerCard: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        padding: 10,
+        borderWidth: 2,
+        borderColor: '#ccc',
+        borderRadius: 10,
+        marginBottom: 15
+    },
+    titleProduct: {
+        fontSize: 15,
+        fontWeight: 'bold',
+        color: 'black'
+    },
+    imageProduct: {
+        width: 70,
+        height: 70
+    },
+    iconCart: {
+        flex: 1,
+        alignItems: 'flex-end',
+    },
+    containerModal: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'rgba(0,0,0,0.5)'
+    },
+    contentModal: {
+        padding: 20,
+        backgroundColor: SECONDARY_COLOR,
+        borderRadius: 10,
+    },
+    headerModal: {
+        flexDirection: 'row',
+        borderBottomWidth: 1,
+        borderBottomColor: '#ccc',
+        padding: 10
+    },
+    titleModal: {
+        fontSize: 19,
+        fontWeight: 'bold',
+        color: '#000'
+    },
+    imageModal: {
+        width: 150,
+        height: 150,
+        marginTop: 5
+    },
+    containerQuantity: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    buttonQuantity: {
+        height: 50,
+        width: 50,
+        backgroundColor: PRIMARY_COLOR,
+        borderRadius: 30,
+        margin: 15,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    buttonQuantityText: {
+        color: SECONDARY_COLOR,
+        fontSize: 20,
+        fontWeight: 'bold'
+    },
+    textQuantity: {
+        fontSize: 16,
+        color: '#000'
+    },
+    buttonCart:{
+        backgroundColor: PRIMARY_COLOR,
+        paddingVertical:10,
+        borderRadius:5,
+        alignItems:'center',
+        marginTop:10
+    },
+    buttonCartText:{
+        color:SECONDARY_COLOR,
+        fontWeight:'bold'
+    },
+    textStock:{
+        fontSize:18,
+        fontWeight:'bold',
+        textAlign:'center',
+        color:'red'
     }
 })
