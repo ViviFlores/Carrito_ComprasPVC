@@ -10,14 +10,25 @@ interface Props {
     product: Product;
     isVisible: boolean;
     setShowModal: () => void;
+    updateStock: (idProduct: number, quantity: number) => void;
 }
 
-export const ModalProduct = ({ product, isVisible, setShowModal }: Props) => {
+export const ModalProduct = ({ product, isVisible, setShowModal, updateStock }: Props) => {
     //hook useWindowDimensions para obtener las dimensiones de la ventana
     const { width } = useWindowDimensions();
 
     //hook useState para manejar la cantidad de productos
     const [quantity, setQuantity] = useState<number>(1);
+
+    //función para agregar el producto al carrito
+    const handleAddProduct = () => {
+        //llamar función para actualizar el stock
+        updateStock(product.id, quantity);
+        //cerrar el modal
+        setShowModal();
+        //reiniciar la cantidad de productos
+        setQuantity(1);
+    }
 
     return (
         <Modal visible={isVisible} animationType='fade' transparent={true}>
@@ -70,7 +81,8 @@ export const ModalProduct = ({ product, isVisible, setShowModal }: Props) => {
                                         Total: ${(product.price * quantity).toFixed(2)}
                                     </Text>
                                 </View>
-                                <TouchableOpacity style={styles.buttonCart}>
+                                <TouchableOpacity style={styles.buttonCart}
+                                    onPress={handleAddProduct}>
                                     <Text style={styles.buttonCartText}>Agregar Carrito</Text>
                                 </TouchableOpacity>
                             </View>

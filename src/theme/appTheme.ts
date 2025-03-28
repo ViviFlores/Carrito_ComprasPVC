@@ -144,5 +144,37 @@ export const styles = StyleSheet.create({
         fontWeight:'bold',
         textAlign:'center',
         color:'red'
+    },
+    headerHome:{
+        flexDirection:'row',
+        alignItems:'center'
+    },
+    textIconCar:{
+        backgroundColor:SECONDARY_COLOR,
+        paddingHorizontal: 5,
+        borderRadius:10,
+        fontSize:12,
+        fontWeight:'bold'
+    },
+    headerTable:{
+        flexDirection:'row',
+        justifyContent:'space-between',
+    },
+    headerDescription:{
+        flexDirection:'row',
+    },
+    textHeaderTable:{
+        fontWeight:'bold',
+        color:'#000'
+    },
+    containerTotal:{
+        alignItems:'flex-end',
+        marginVertical:15,
+        marginRight:10
+    },
+    textTotal:{
+        fontSize:16,
+        fontWeight:'bold',
+        color:'#000'
     }
 })
